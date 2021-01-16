@@ -1,0 +1,111 @@
+/*
+  By: @Luka
+  Created: Jan, 16 2021
+  Modifed: None
+*/
+
+html, body
+{
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+}
+
+*
+{
+  box-sizing: border-box;
+}
+
+section
+{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.slider
+{
+  width: 100%;
+  height: 100%;
+}
+
+.slider .images img
+{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  opacity: 0;
+  transition: 0.5s opacity;
+}
+
+.slider .images img.active
+{
+  opacity: 1;
+}
+
+.slider .controller
+{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 3;
+}
+
+.slider .controller button
+{
+  background-color: transparent;
+  width: 100px;
+  height: 100%;
+  border: none;
+  color: white;
+  cursor: pointer;
+  font-size: 50px;
+  transition: 0.5s background-color;
+  outline: none;
+}
+
+.slider .controller button:hover
+{
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+.slider .bars
+{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 5;
+  width: 100%;
+  height: 50px;
+  position: absolute;
+  bottom: 0
+}
+
+
+.slider .bars button
+{
+  border-radius: 0;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  margin: 0 5px;
+  padding: 2px 20px;
+  background-color: rgba(255, 255, 255, 0.5);
+  transition: 0.5s background-color;
+}
+
+.slider .bars button.active
+{
+  background-color: rgba(255, 255, 255, 1);
+}
+
+.slider .bars button:hover
+{
+  background-color: rgba(255, 255, 255, 1);
+}
