@@ -1,0 +1,209 @@
+html, body
+{
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+*
+{
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  box-sizing: border-box;
+}
+
+section
+{
+  margin: 100px auto;
+  max-width: 1400px;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.add
+{
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.add input
+{
+  width: 500px;
+  margin: 15px 0 0 0;
+  padding: 15px;
+  outline: none;
+  border-radius: 4px;
+  border: 1px solid rgb(0, 170, 255);
+  transition: 0.5s box-shadow;
+}
+
+.add input:focus
+{
+  box-shadow: 0px 0px 5px 3px rgba(0, 170, 255, 0.5);
+}
+
+.add button
+{
+  padding: 10px 15px;
+  background-color: rgb(0, 170, 255);
+  color: white;
+  outline: none;
+  cursor: pointer;
+  margin: 5px 0;
+  width: 500px;
+  border-radius: 4px;
+  border: none;
+  transition: 0.5s background-color;
+}
+
+.add button:hover
+{
+  background-color: rgb(0, 140, 255);
+}
+
+
+.list
+{
+  display: flex;
+  flex-direction: row;
+}
+
+.list .todo
+{
+  height: 400px;
+}
+
+.list>div
+{
+  border: 1px solid rgb(0, 170, 255);
+  margin: 50px 0 0 0;
+  background-color: rgb(240, 240, 240);
+  width: 400px;
+  height: 400px;
+  overflow-y:scroll;
+  border-radius: 8px;
+}
+
+.list>div:nth-child(1)
+{
+  margin: 50px 100px 0 0;
+}
+
+
+.task
+{
+  display: flex;
+  flex-direction: row;
+  background-color: rgb(250, 250 ,250);
+  width: 100%;
+  height: 40px;
+  align-items: center;
+  justify-content: center;
+  margin: 0 0 5px 0;
+}
+
+.task p:nth-child(1)
+{
+  width: 200px;
+  height: auto
+}
+
+.task p:nth-child(2)
+{
+  flex: 1;
+  width: 500px;
+  height: auto
+}
+
+.done_button
+{
+  width: 40px;
+  height: 40px;
+  border: none;
+  outline: none;
+  font-size: 24px;
+  background-color: rgb(0, 255, 0);
+  color: white;
+  cursor: pointer;
+  transition: 0.5s; 
+}
+
+.delete_button
+{
+  width: 40px;
+  height: 40px;
+  border: none;
+  outline: none;
+  font-size: 24px;
+  background-color: rgb(255, 0, 0);
+  color: white;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.delete_button:hover
+{
+  background-color: rgb(200, 0, 0);
+}
+
+.done_button:hover
+{
+  background-color: rgb(0, 200, 0);
+}
+
+.task p
+{
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+
+#CLEAR_TODO_BUTTON
+{
+  padding: 10px 15px;
+  background-color: rgb(255, 0, 0);
+  color: white;
+  outline: none;
+  cursor: pointer;
+  margin: 5px 0;
+  width: 500px;
+  border-radius: 4px;
+  border: none;
+  transition: 0.5s background-color;
+}
+
+#CLEAR_TODO_BUTTON:hover
+{
+  background-color: rgb(200, 0, 0);
+}
+
+
+@media only screen and (max-width: 946px)
+{
+  .list
+  {
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .todo
+  {
+    margin: 50px 0 0 0!important
+  }
+
+  .add *
+  {
+    width: 100%!important;
+  }
+
+  .add
+  {
+    padding: 0 100px;
+  }
+}
